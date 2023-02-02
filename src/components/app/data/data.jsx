@@ -4,11 +4,8 @@ import { ContentWrapper } from "../contentwrapper/contentwrapper"
 // import { NavLink } from 'react-router-dom'
 
 const Data = () => {
-    return(
-        <ContentWrapper
-            title="" description="">
-                <section><DataList /></section>
-        </ContentWrapper>
+    return (
+        <section><DataList /></section>
     )
 }
 
@@ -19,35 +16,39 @@ const DataList = () => {
         const url = `http://localhost:4000/poster`
 
         const getData = async () => {
-        try{ 
-            const result = await axios.get(url)
-            setApiData(result.data)
-        }
-        catch(err) {
-            console.error(err)
-        }
+            try {
+                const result = await axios.get(url)
+                setApiData(result.data)
+            }
+            catch (err) {
+                console.error(err)
+            }
         }
         getData()
     }, [setApiData])
 
-    
-    return(
+
+    return (
         <div>
             {apiData && apiData.map(item => {
-                return(
+                return (
                     <figure key={item.id}>
                         <img src={item.image} alt="Posters" />
-                            <figcaption>
-                                <p>{item.name}</p>
-                                <p>{item.description}</p>
-                            </figcaption>
+                        <figcaption>
+                            <h2>{item.name}</h2>
+                            <p>{item.description}</p>
+                            {item.genres && item.genres.map(genre => {
+                                return (
+                                    <p>{genre.title}</p>
+                                )
+                            })}
+                        </figcaption>
                     </figure>
-                    
+
                 )
-                 
             })}
         </div>
-       
+
     )
 }
 
