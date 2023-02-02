@@ -1,5 +1,5 @@
 import { ContentWrapper } from "../../components/app/contentwrapper/contentwrapper"
-import DataList from "../../components/app/data/data"
+import Data from "../../components/app/data/data"
 
 
 const Plakater = () => {
@@ -7,7 +7,7 @@ const Plakater = () => {
     <ContentWrapper
     title='plakater' 
     description='description'>
-    <section><DataList /></section>
+    <section><Data /></section>
     </ContentWrapper>
   )
 }

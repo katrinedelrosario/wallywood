@@ -1,7 +1,16 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
+import { ContentWrapper } from "../contentwrapper/contentwrapper"
 // import { NavLink } from 'react-router-dom'
 
+const Data = () => {
+    return(
+        <ContentWrapper
+            title="" description="">
+                <section><DataList /></section>
+        </ContentWrapper>
+    )
+}
 
 const DataList = () => {
     const [apiData, setApiData] = useState([])
@@ -33,11 +42,13 @@ const DataList = () => {
                                 <p>{item.description}</p>
                             </figcaption>
                     </figure>
+                    
                 )
+                 
             })}
         </div>
        
     )
 }
 
-export default DataList
+export default Data

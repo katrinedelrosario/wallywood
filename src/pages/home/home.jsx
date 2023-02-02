@@ -1,6 +1,6 @@
 import { ContentWrapper } from "../../components/app/contentwrapper/contentwrapper"
-import DataList from "../../components/app/data/data"
 import SlideWrapper from "../../components/app/slidewrapper/slidewrapper"
+import HomeMain from "../../components/partials/homemain"
 
 
 const Home = () => {
@@ -10,13 +10,10 @@ const Home = () => {
             <ContentWrapper
                 title='sidste nyt...'
                 description=''>
-                <section><DataList /></section>
+                <section><HomeMain /></section>
             </ContentWrapper>
         </>
     )
 }
-
-
-
 
 export default Home
