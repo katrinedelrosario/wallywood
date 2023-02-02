@@ -20,7 +20,7 @@ const PosterProvider = ({children}) => {
     }, [children])
 
     return (
-        <PosterContext.Provider value={(posterList, setPosterList)}>
+        <PosterContext.Provider value={{posterList, setPosterList}}>
             {children}
         </PosterContext.Provider>
     )

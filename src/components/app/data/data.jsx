@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
-import { ContentWrapper } from "../contentwrapper/contentwrapper"
 // import { NavLink } from 'react-router-dom'
 
 const Data = () => {
@@ -46,6 +45,7 @@ const DataList = () => {
                     </figure>
 
                 )
+
             })}
         </div>
 

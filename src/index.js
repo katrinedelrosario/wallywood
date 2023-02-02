@@ -10,14 +10,16 @@ import { PosterProvider } from './components/app/posterlist/posterlist';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+     <PosterProvider>
     <BrowserRouter>
-    <PosterProvider>
+   
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <App />
       </ThemeProvider>
-      </PosterProvider>
+      
     </BrowserRouter>
+    </PosterProvider>
   </React.StrictMode>
 );
 
