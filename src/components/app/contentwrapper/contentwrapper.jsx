@@ -1,5 +1,3 @@
-
-
 const ContentWrapper = props => {
 
     document.title = props.title
@@ -19,7 +17,5 @@ const ContentWrapper = props => {
         </>
     )
 }
-
-
 
 export { ContentWrapper }
