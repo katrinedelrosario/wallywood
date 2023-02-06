@@ -1,6 +1,7 @@
 import { ContentWrapper } from "../../components/app/contentwrapper/contentwrapper";
 import { usePosterData } from "../../components/app/posterlist/posterlist";
 import SlideWrapper from "../../components/app/slidewrapper/slidewrapper";
+import HomeStyle from "../../components/styled/homemain.styled";
 
 
 const Home = () => {
@@ -11,19 +12,23 @@ const Home = () => {
 	<>
 		<SlideWrapper />
 		<ContentWrapper 
-		title="Velkommen"
-		description="Her finder du nye og gamle film plakater"
-		subtitle="Alt i filmplakater">
+		title="sidste nyt..."
+		description="Her finder du nye og gamle film plakater">
 			{posterList && posterList.slice(0,2).map(poster => {
 				return (
-					
-                       <figure key={poster.id}>
+					<HomeStyle>
+						<div>
+						<figure key={poster.id}>
 						<img src={poster.image} alt="Poster" />
 						<figcaption>
-							<p>{poster.name}</p>
-							<p>{poster.description}</p>
+							<h2>{poster.name}</h2>
+							<p>Abernes Planet: Revolutionen&#8217;, foregår i en fremtid, hvor den hyperintelligente chimpanse, Caesar, leder en voksende nation af genetisk udviklede abekatte.</p>
+							<p> genre: {poster.genre}</p>
+							<button type='button'>læs mere</button>
 							</figcaption>
                         </figure>
+						</div>
+					</HomeStyle>
 				)
 			})}
 		</ContentWrapper>

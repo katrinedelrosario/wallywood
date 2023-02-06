@@ -1,48 +1,64 @@
-import Data from "../app/data/data"
 import styled from "styled-components"
 
+const HomeStyle = styled.section`
 
-const HomeMain = () => {
-    const MainStyle = styled.section`
-    max-width: 1012px;
-    max-height: 208px;
     display: inline;
-    margin: 0 0;
-    padding: 0 0;
-    figure {
-        border: solid purple;
-        width: 506px;
+    div {
+        display: inline-block;
+        padding: 0;
+        margin: 0 0 1.5em 0;
+        position: relative;
+        max-width: 50%;
+
+        figure {
+        padding: 0;
+        margin: 0;
+
         display: flex;
         justify-content: left;
-        align-items: left;
+        object-fit: contain;
+
         img {
-        width: 140px;
+        max-width: auto;
+        max-height: 27vh;
         align-items: left;
         }
         figcaption {
-            width: 314px;
-            height: 114px;
+
             align-items: right;
             padding-left: 1em;
-            top: 509px;
-            left: 871px;
-            width: 314px;
+
+
             h2 {
-                font-size: 15pt;
+                font-size: 20px;
+                margin-top: 0;
+                max-width: 90%;
+                color: ${props => props.theme.colors.tertiary};
             }
             p {
-                font-size: 10pt;
-                width: 75%;
-                
+                font-size: 14px;
+                color: ${props => props.theme.colors.tertiary};
+                max-width: 90%;
+            }
+            button {
+            font-size: 16px;
+            color: ${props => props.theme.colors.tertiary};
+            border: 1px solid ${props => props.theme.colors.tertiary};
+            position: absolute;
+            width: 101px;
+            height: 34px;
+            align-items: left;
+            bottom: 0;
+            background-color: ${props => props.theme.colors.quinary};
+            ::first-letter {
+                text-transform: capitalize;
             }
         }
+
+        }
+    }
+
     }
     `
-    return (
-        <MainStyle>
-            <Data />
-        </MainStyle>
-    )
-}
 
-export default HomeMain
+export default HomeStyle
