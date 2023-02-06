@@ -11,7 +11,6 @@ const theme = {
 		light: "#fff"
 	},
 	fonts: ['Titillium Web', 'Open Sans']
-
 }
 
 export {theme}

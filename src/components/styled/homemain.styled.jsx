@@ -48,10 +48,17 @@ const HomeStyle = styled.section`
             width: 101px;
             height: 34px;
             align-items: left;
+            border-radius: 3px;
+            opacity: 1;
             bottom: 0;
             background-color: ${props => props.theme.colors.quinary};
             ::first-letter {
                 text-transform: capitalize;
+            }
+            &:hover {
+                background-color: ${props => props.theme.colors.senary};
+                color: ${props => props.theme.colors.light};
+
             }
         }
 
