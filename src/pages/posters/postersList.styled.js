@@ -4,35 +4,34 @@ export const PostersListStyle = styled.section`
 	margin: 0;
 	padding: 0;
     display: inline;
+    max-width: 100%;
     ul {
         padding: 0;
-        margin: 0 0 1.5em 0;
+        margin: 0 0 1.5em 1em;
         position: relative;
-
         display: grid; 
-grid-template-columns: repeat(3, 1fr); 
-grid-template-rows: 1fr; 
-grid-column-gap: 1em;
-grid-row-gap: 0px; 
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: 1fr; 
+        grid-column-gap: -2em;
+        grid-row-gap: 4em; 
 
         li {
-
         }
         figure {
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: left;
-		max-width: 30%;
+        margin: 2em 1em;
+        display: block;
+        justify-content: center;
+		max-width: 20%;
 
         img {
         max-width: auto;
-        max-height: 27vh;
-        align-items: left;
+        max-height: 40vh;
+        display: block;
         }
         figcaption {
-            align-items: right;
-            padding-left: 1em;
+            align-items: center;
+            position: absolute;
+            display: block;
             h2 {
                 font-size: 20px;
                 margin-top: 0;
@@ -40,10 +39,11 @@ grid-row-gap: 0px;
                 color: ${props => props.theme.colors.tertiary};
             }
             p {
-                font-size: 14px;
+                font-size: auto;
                 color: ${props => props.theme.colors.tertiary};
-                max-width: 90%;
+                max-width: 100%;
                 margin-bottom: 2em;
+                padding-bottom: 1em;
             }
             button {
             font-size: 16px;

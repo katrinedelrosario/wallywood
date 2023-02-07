@@ -9,10 +9,10 @@ const Posters = () => {
   return (
     <ContentWrapper title="Plakater" description="Se vores udvalg af plakater">
       <PostersStyle>
-        <div>
+        <section>
           <h2>filtre</h2>
           <GenreList />
-        </div>
+        </section>
         <div>
           <Outlet />
         </div>
@@ -33,16 +33,18 @@ const GenreList = () => {
   }, [setData]);
 
   return (
+    <>
+    <h4>genre</h4>
     <ul>
       {data && data.map(genre => {
         return (
           <li key={genre.id}>
             <Link to={`/posters/${genre.slug}`}>{genre.title}</Link>
-
           </li>
         )
       })}
     </ul>
+    </>
   )
 }
 
