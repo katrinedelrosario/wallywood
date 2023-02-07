@@ -1,7 +1,7 @@
 import { ContentWrapper } from "../../components/app/contentwrapper/contentwrapper";
 import { usePosterData } from "../../components/app/posterlist/posterlist";
 import SlideWrapper from "../../components/app/slidewrapper/slidewrapper";
-import HomeStyle from "../../components/styled/homemain.styled";
+import HomeStyle from "./home.styled";
 
 
 const Home = () => {
@@ -23,7 +23,11 @@ const Home = () => {
 						<figcaption>
 							<h2>{poster.name}</h2>
 							<p>Abernes Planet: Revolutionen&#8217;, foregår i en fremtid, hvor den hyperintelligente chimpanse, Caesar, leder en voksende nation af genetisk udviklede abekatte.</p>
-							<p> genre: {poster.genre}</p>
+							{poster.genres && poster.genres.map(genre => {
+                                    return(
+                                        <p>Genre: {genre.title}</p>
+                                    )
+                                })}
 							<button type='button'>læs mere</button>
 							</figcaption>
                         </figure>
