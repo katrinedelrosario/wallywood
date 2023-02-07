@@ -3,7 +3,7 @@ import { PostersStyle } from "./posters.styled"
 import axios from "axios"
 import { Link, Outlet, useParams } from "react-router-dom"
 import { ContentWrapper } from "../../components/app/contentwrapper/contentwrapper"
-import { PosterListStyle } from "./posterList.styled"
+import { PostersListStyle } from "./postersList.styled"
 
 const Posters = () => {
   return (
@@ -59,7 +59,7 @@ const PosterList = () => {
   }, [slug]);
 
   return (
-    <PosterListStyle>
+    <PostersListStyle>
       <div>
         <ul>
           {data && data.map(poster => {
@@ -82,7 +82,7 @@ const PosterList = () => {
           })}
         </ul>
       </div>
-    </PosterListStyle>
+    </PostersListStyle>
   )
 
 }
