@@ -9,14 +9,17 @@ const GlobalStyle = createGlobalStyle`
 body {
     background-color: ${props => props.theme.colors.primary};
     ${Reset};
-    text-transform: capitalize;
 
 }
 h1 {
     color: ${props => props.theme.colors.secondary};
     font-family: ${props => props.theme.fonts[0]};
     font-size: 2rem;
+    
 
 }
+::first-letter {
+                text-transform: capitalize;
+            }
 `
 export { GlobalStyle }

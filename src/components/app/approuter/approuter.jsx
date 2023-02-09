@@ -3,6 +3,7 @@ import { PosterDetails, PosterList, Posters } from '../../../pages/posters/poste
 import Home from '../../../pages/home/home'
 import About from '../../../pages/about/about';
 import NotFound from '../../../pages/notfound/notfound';
+import Login from '../../../pages/login/login';
 
 const AppRouter = () => {
 	return (
@@ -13,6 +14,7 @@ const AppRouter = () => {
 				<Route path=":slug/:poster" element={<PosterDetails />} />
 			</Route>
 			<Route path="/about" element={<About />} />
+			<Route path="/login" element={<Login />} />
             <Route path="*" element={<NotFound />} />
 		</Routes>
 	);

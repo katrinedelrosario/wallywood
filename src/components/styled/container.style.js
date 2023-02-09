@@ -7,10 +7,19 @@ export const ContainerStyle = styled.section `
 	min-height: 100vh;
 	max-width: ${props => props.maxwidth}px;
 	padding: 1rem 2.3rem;
-	p {
-		::first-letter {
+	div {
+		p {
+			a {
+				text-decoration: none;
+			
+			}
+			::first-letter {
                 text-transform: capitalize;
             }
+		}
 	}
+	::first-letter {
+                text-transform: capitalize;
+            }
     
 `
