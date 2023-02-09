@@ -1,7 +1,7 @@
 import { ContentWrapper } from "../../components/app/contentwrapper/contentwrapper"
 
 
-const OmOs = () => {
+const About = () => {
     return (
       <ContentWrapper
       title='om os' 
@@ -14,4 +14,4 @@ const OmOs = () => {
     )
 }
 
-export default OmOs
+export default About
