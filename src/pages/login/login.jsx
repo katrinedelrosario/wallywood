@@ -1,5 +1,4 @@
 import axios from "axios"
-import { useContext } from "react"
 import { ContentWrapper } from "../../components/app/contentwrapper/contentwrapper"
 import { useAuth } from "../../components/providers/authProvider"
 
@@ -14,10 +13,10 @@ const Login = () => {
 
     const endpoint = 'http://localhost:4000/login'
     try {
-      const result = await axios.post(endpoint, formdata);
-      handleSessionData(result.data.access_token);
+      const result = await axios.post(endpoint, formdata)
+      handleSessionData(result.data.access_token)
     } catch (err) {
-      console.error(`kunne ikke logge ind: ${err}`);
+      console.error(`kunne ikke logge ind: ${err}`)
     }
   }
 
