@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ClearList } from './mixins'
+import { ClearList } from '../styled/mixins'
 
 export const NavBarPrimaryStyle = styled.nav`
 	height: 100%;

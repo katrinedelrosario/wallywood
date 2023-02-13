@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Reset } from './mixins'
+import { Reset } from '../styled/mixins'
 
 export const FooterStyle = styled.footer`
 	border-top: solid 1px ${props => props.theme.colors.quinary};

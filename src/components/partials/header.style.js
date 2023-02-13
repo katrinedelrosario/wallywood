@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Reset } from './mixins'
+import { Reset } from '../styled/mixins'
 
 export const HeaderStyle = styled.header`
 	display: flex;

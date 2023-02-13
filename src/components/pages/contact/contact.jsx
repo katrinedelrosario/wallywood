@@ -1,4 +1,4 @@
-import { ContentWrapper } from "../../components/app/contentwrapper/contentwrapper"
+import { ContentWrapper } from "../../app/elements/contentwrapper/contentwrapper"
 
 
 const Contact = () => {

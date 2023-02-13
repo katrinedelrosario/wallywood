@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
-import { HeaderStyle } from "../styled/header.style";
+import CartIcon from "../pages/cart/cartIcon";
+import { HeaderStyle } from "./header.style";
 import NavBarPrimary from "./navbarprimary";
 
 const Header = () => {
     return (
         <HeaderStyle>
             <Link to ='/'>wallywood</Link>
+            <CartIcon/>
             <NavBarPrimary/>
         </HeaderStyle>
     )
