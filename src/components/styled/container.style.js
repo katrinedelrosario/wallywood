@@ -1,25 +1,14 @@
 import styled from 'styled-components'
 
-export const ContainerStyle = styled.section `
+export const ContainerStyle = styled.section`
+    background-color: ${props => props.theme.colors.light};
+    height: 100%;
+    width: 100%;
+    max-width: ${props => props.maxwidth}px;
     margin: 0 auto;
-	background-color: ${props => props.theme.colors.light};
-	width: 100%;
-	min-height: 100vh;
-	max-width: ${props => props.maxwidth}px;
-	padding: 1rem 2.3rem;
-	div {
-		p {
-			a {
-				text-decoration: none;
-			
-			}
-			::first-letter {
-                text-transform: capitalize;
-            }
-		}
-	}
+    padding: 1rem 2.3rem;
 	::first-letter {
                 text-transform: capitalize;
             }
-    
 `
+		

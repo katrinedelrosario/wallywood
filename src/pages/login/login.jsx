@@ -4,7 +4,7 @@ import { useAuth } from "../../components/providers/authProvider"
 
 const Login = () => {
 
-  const [loginData, setLoginData] = useAuth()
+  const {loginData, setLoginData} = useAuth()
 
   const submitHandle = async e => {
     const formdata = new URLSearchParams()
@@ -27,6 +27,11 @@ const Login = () => {
     }
   }
 
+  const Logout = () => {
+    sessionStorage.removeItem('token')
+    setLoginData()
+  }
+
   return (
     <ContentWrapper
       title='login'
@@ -42,12 +47,15 @@ const Login = () => {
             <input type="password" name="password" />
           </div>
           <div>
-            <button type="button" onClick={e => submitHandle()}>login</button>
+            <button type="button" onClick={(e) => submitHandle(e)}>login</button>
           </div>
         </form>
 
       ) : (
-        <div>du er logget ind</div>
+        <div>
+          <p>du er logget ind</p>
+          <button type="button" onClick={() => Logout()}>log ud</button>
+        </div>
       )}
     </ContentWrapper>
   )

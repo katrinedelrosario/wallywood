@@ -1,7 +1,7 @@
 import { ContentWrapper } from "../../components/app/contentwrapper/contentwrapper"
 
 
-const Kontakt = () => {
+const Contact = () => {
     return (
       <ContentWrapper
       title='kontakt' 
@@ -11,4 +11,4 @@ const Kontakt = () => {
     )
 }
 
-export default Kontakt
+export default Contact
