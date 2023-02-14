@@ -14,7 +14,7 @@ const Login = () => {
     const endpoint = 'http://localhost:4000/login'
     try {
       const result = await axios.post(endpoint, formdata)
-      handleSessionData(result.data)
+      handleSessionData(result.data.access_token)
     } catch (err) {
       console.error(`kunne ikke logge ind: ${err}`)
     }
@@ -23,19 +23,19 @@ const Login = () => {
   const handleSessionData = data => {
     if (data) {
       sessionStorage.setItem('token', JSON.stringify(data))
-      setLoginData()
+      setLoginData(data)
     }
   }
 
   const Logout = () => {
     sessionStorage.removeItem('token')
-    setLoginData()
+    setLoginData('')
   }
 
   return (
     <ContentWrapper
-      title='login'
-      description='description'>
+      title='login'>
+
       {!loginData ? (
         <form method="POST">
           <div>
@@ -47,7 +47,7 @@ const Login = () => {
             <input type="password" name="password" />
           </div>
           <div>
-            <button type="button" onClick={(e) => submitHandle(e)}>login</button>
+            <button type="button" onClick={e => submitHandle(e)}>login</button>
           </div>
         </form>
 

@@ -16,7 +16,6 @@ const AddToCartButton = props => {
 				Authorization: `Bearer ${loginData.access_token}`
 			}
 		}
-		console.log(options);
 
 		const formdata = new URLSearchParams()
 		formdata.append('poster_id', props.id)
