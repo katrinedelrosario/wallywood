@@ -11,8 +11,8 @@ const Posters = () => {
     return (
         <ContentWrapper title="Plakater" description="Se vores udvalg af plakater">
             <PostersStyle>
-                <div><GenreList /></div>
-                <div><Outlet /></div>
+                <GenreList />
+                <Outlet />
             </PostersStyle>
         </ContentWrapper>
     )
@@ -67,7 +67,7 @@ const PosterList = () => {
                         <div className="images">
                             <img src={poster.image} alt={poster.name} />
                             <h2>{poster.name}</h2>
-                            <h3>Kr. {poster.price}</h3>
+                            <h3>Kr. {poster.price},00</h3>
                             <p>
                                 <AddToCartButton id={poster.id}>Læg i kurv</AddToCartButton>
                             </p>

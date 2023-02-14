@@ -11,25 +11,29 @@ const CartProvider = ({ children }) => {
 
     const [cartItems, setCartItems] = useState([])
     const { loginData } = useAuth()
+    console.log(loginData);
 
     useEffect(() => {
         const getData = async () => {
+            if (loginData && loginData.access_token) {
+
             const options = {
                 headers: {
-                    Authorization: `Bearer ${loginData.acces_token}`
+                    Authorization: `Bearer ${loginData.access_token}`
                 }
             }
+            console.log(options);
 
             const endpoint = `http://localhost:4000/cart`
 
             try {
-                if (loginData && loginData.acces_token) {
                     const result = await axios.get(endpoint, options)
                     setCartItems(result.data)
-                }
+                
             } catch (err) {
                 console.error(`fejl i kald af cart list: ${err}`);
             }
+        }
         }
         getData()
     }, [children, loginData])

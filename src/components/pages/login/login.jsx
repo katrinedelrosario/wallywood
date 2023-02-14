@@ -14,7 +14,7 @@ const Login = () => {
     const endpoint = 'http://localhost:4000/login'
     try {
       const result = await axios.post(endpoint, formdata)
-      handleSessionData(result.data.access_token)
+      handleSessionData(result.data)
     } catch (err) {
       console.error(`kunne ikke logge ind: ${err}`)
     }
