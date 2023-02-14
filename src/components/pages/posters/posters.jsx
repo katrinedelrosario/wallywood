@@ -3,7 +3,7 @@ import { ContentWrapper } from "../../app/elements/contentwrapper/contentwrapper
 import { PostersStyle } from "./posters.styled"
 import axios from "axios"
 import { Link, Outlet, useParams } from "react-router-dom"
-import AddToCartButton from "../cart/addtocartbutton"
+import AddToCartButton from "../../app/cart/addtocartbutton"
 
 
 const Posters = () => {

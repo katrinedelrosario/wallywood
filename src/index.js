@@ -5,7 +5,7 @@ import { theme } from './components/styled/theme'
 import App from './App';
 import { AuthProvider } from './components/app/providers/authProvider';
 import { CartProvider } from './components/app/providers/cartProvider';
-import { PosterProvider } from './components/pages/posters/posterlist/posterlist';
+import { PosterProvider } from './components/pages/posters/posterlist/posterslist';
 import { GlobalStyle } from './components/styled/global.style';
 import { BrowserRouter } from 'react-router-dom';
 

@@ -1,5 +1,5 @@
 import { ContentWrapper } from "../../app/elements/contentwrapper/contentwrapper";
-import { usePosterData } from "../posters/posterlist/posterlist";
+import { usePosterData } from "../posters/posterlist/posterslist";
 import SlideWrapper from "../../app/elements/slidewrapper/slidewrapper";
 import HomeStyle from "./home.styled";
 

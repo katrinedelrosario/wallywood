@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import CartIcon from "../pages/cart/cartIcon";
+import CartIcon from "../app/cart/cartIcon";
 import { HeaderStyle } from "./header.style";
 import NavBarPrimary from "./navbarprimary";
 

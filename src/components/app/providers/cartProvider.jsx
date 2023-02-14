@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { createContext } from "react";
 import { useAuth } from "./authProvider";
 
-
 const CartContext = createContext()
 
 const CartProvider = ({ children }) => {
