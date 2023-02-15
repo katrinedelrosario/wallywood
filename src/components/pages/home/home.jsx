@@ -1,12 +1,12 @@
 import { ContentWrapper } from "../../app/elements/contentwrapper/contentwrapper";
-import { usePosterData } from "../posters/posterlist/posterslist";
 import SlideWrapper from "../../app/elements/slidewrapper/slidewrapper";
 import HomeStyle from "./home.styled";
+import { usePostersData } from "../../app/providers/postersProvider";
 
 
 const Home = () => {
-	const { posterList } = usePosterData()
-	console.log(posterList);
+	const { postersList } = usePostersData()
+	console.log(postersList);
 
   return (
 	<>
@@ -14,7 +14,7 @@ const Home = () => {
 		<ContentWrapper 
 		title="sidste nyt..."
 		description="Her finder du nye og gamle film plakater">
-			{posterList && posterList.slice(0,2).map(poster => {
+			{postersList && postersList.slice(0,2).map(poster => {
 				return (
 					<HomeStyle>
 						<div>
